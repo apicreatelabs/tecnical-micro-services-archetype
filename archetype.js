@@ -12,7 +12,7 @@ async function createProjectBase(oringin,destination){
 }
 
 async function createPorject() {
-     let path = './'
+     let path = '../'
      console.log('Welcome Archetype Api Create :)' .yellow);
      console.log('creating Project :)'.grey);
      createProjectBase('./config/project_base',`${path}${process.env.FOLDERPROJECT}`)

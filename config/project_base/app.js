@@ -9,11 +9,12 @@ const port = process.env.PORT || 3000
 
 const app =  express();
 
-app.use('/',swaggerUI.serve,swaggerUI.setup(swaggerDocument));
+//rutas
+const helloRoute =  require('./routes/hello')
 
-app.get('/',(req,res)=>{
-    res.json({ message: "Hello World" })
-});
+app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(swaggerDocument));
+
+app.use('/hello',helloRoute);
 
 app.listen(port,()=>{
     console.log(`Api running port: ${port}`);

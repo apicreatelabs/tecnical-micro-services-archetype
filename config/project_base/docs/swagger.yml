@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  description: Microservices Api Create Archetype.
+  version: "1.0.0"
+  title: Api Create Micro Services Archetype
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    email: apicreatecol@gmail.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+servers:
+# Added by API Auto Mocking Plugin
+  - description: Api Create Production
+    url: https://apicreate.com/services
+  - description: Api Create Develop
+    url: 'http://localhost:3000'
+tags:
+  - name: hello
+    description: Operations about hello
+    externalDocs:
+      description: Find out more about our hello
+      url: 'http://swagger.io'
+paths:
+  /hello:
+    get:
+      tags:
+        - hello
+      summary: sumary hello
+      operationId: hello
+      responses:
+        default:
+          description: hello operation
+externalDocs:
+  description: Find out more about Swagger
+  url: 'http://swagger.io'
+components:
+  schemas:
+    Hello:
+      type: object
+      properties:
+        message:
+          type: string
+      xml:
+        name: Hello
+    ApiResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        type:
+          type: string
+        message:
+          type: string
+  securitySchemes:
+    petstore_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'http://apicreate.com/oauth'
+          scopes:
+            'write:hello': modify pets in your account
+            'read:hello': read your pets
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header
