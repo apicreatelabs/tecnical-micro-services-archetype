@@ -1,0 +1,30 @@
+{
+  "name": "tecnical-micro-services-archetype",
+  "version": "1.0.0",
+  "description": "Api Create Archetype",
+  "main": "archetype.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon archetype.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apicreatelabs/tecnical-micro-services-archetype.git"
+  },
+  "keywords": [
+    "Archetype",
+    "Api",
+    "Microservice"
+  ],
+  "author": "Jorge Ivan Reyes Valencia <jorgeivanreyesvalencia92@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apicreatelabs/tecnical-micro-services-archetype/issues"
+  },
+  "homepage": "https://github.com/apicreatelabs/tecnical-micro-services-archetype#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "fs-extra": "^9.1.0"
+  }
+}
